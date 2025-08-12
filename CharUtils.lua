@@ -19,7 +19,7 @@ local function getModelsCost(table)
    local result = {}
    for name, model in pairs(table)
       local value = model.data.cost
-      results = {
+      result = {
         value
       }
    end
