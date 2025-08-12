@@ -86,3 +86,5 @@ function Char:SetModel(player: Player, models, value: number)
 end
 
 return Char
+
+-- Made by Yzol
