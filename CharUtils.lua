@@ -43,12 +43,47 @@ local function findClosest(table, target: number)
    return result, modelName
 end
 
+local function setProp(humanoid)
+   
+end
+
 local function autoSetup(model, defaultSpeed, defaultJump, defaultHealth, defaultMaxHealth, defaultHipHeight)
-   -- Vou fazer ainda
+   local humanoid = Instance.new("Humanoid")
+   with humanoid do
+      WalkSpeed = defaultSpeed
+      JumpPower = defaultJump
+      Health = Health
+      MaxHealth = Health
+      HipHeight = defaultHipHeight
+      AutoRotate = true
+      PlataformStand = false
+      DisplayName = model.Parent.Name
+   end
+   humanoid.Parent = model
+   
+   local rootPart = Instance.new("Part")
+   with rootPart do
+      Name = "HumanoidRootPart"
+      Parent = model
+      Visible = false
+      Size = Vector3.new(1, 1, 1)
+      Anchored = false
+      Position = Vector3.new(0, 2, 0)
+   end
+   
+   local primaryPart = Instance.new("Part")
+   with primaryPart do
+      
+   end
+    
+   local WeldConstraint = Instance.new("Weld")
+   with WeldConstraint do
+      
+   end
 end
 
 function Char:GetNameByCost(table, value: number)
-   for name, data in pairs(table)
+   for name, dt in pirs(tble)
       if data then
          local cost = data[2].cost
          if cost == value then
@@ -87,4 +122,4 @@ end
 
 return Char
 
--- Made by Yzol
+-- Module By Yzol
